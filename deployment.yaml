@@ -6,7 +6,7 @@ metadata:
     app: nginx
   namespace: priyanshu-test
 spec:
-  replicas: 6
+  replicas: 8
   selector:
     matchLabels:
       app: nginx
