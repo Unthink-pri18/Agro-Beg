@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: example-app2
+  namespace: argocd  # Argo CD's namespace
+spec:
+  destination:
+    namespace: dev  # Target namespace where the application will be deployed
+    server: https://kubernetes.default.svc  # URL of the Kubernetes API server
+  source:
+    repoURL: 'https://github.com/Unthink-pri18/Agro-Beg.git'
+    targetRevision: main  # Git revision (branch, tag, commit SHA)
+    path: '.'
+  project: customproject2  # Argo CD Project
